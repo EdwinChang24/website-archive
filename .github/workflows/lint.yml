@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Prepare Nuxt
+        run: npx --no nuxt prepare
+
       - name: Run eslint
         run: npm run lint:eslint
 
