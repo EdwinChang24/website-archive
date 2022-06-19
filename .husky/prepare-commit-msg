@@ -1,3 +1,0 @@
-#!/bin/sh
-exec < /dev/tty
-npx --no gitmoji-commit-hook $1
