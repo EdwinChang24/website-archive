@@ -4,4 +4,8 @@ import { defineNuxtConfig } from "nuxt";
 export default defineNuxtConfig({
     css: ["~/assets/css/tailwind.css"],
     modules: ["@nuxtjs/tailwindcss"],
+    meta: {
+        title: "Edwin Chang",
+        charset: "UTF-8",
+    },
 });
