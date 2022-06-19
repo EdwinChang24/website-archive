@@ -73,4 +73,4 @@ This will start a development server at `localhost:3000/`.
 ## Notes
 
 -   Using Visual Studio Code's built-in Git tools may not work properly with the custom Git hooks. Please use the command line instead.
--   Running `git commit` will run linting and show a prompt to choose an emoji for the commit message. In this prompt, you can select emojis by pressing space and confirming by pressing enter. Using an emoji is recommended. If you don't want to use the prompt, just press enter to skip it.
+-   When committing changes, it's recommended to use `npm run commit` rather than `git commit`. This will show a prompt to format the commit message correctly.
