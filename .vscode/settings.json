@@ -1,0 +1,8 @@
+{
+    "tailwindCSS.files.exclude": ["**/.git/**", "**/node_modules/**", "**/.hg/**"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.associations": {
+        "LICENSE": "plaintext",
+        ".markdownlintignore": "ignore"
+    }
+}

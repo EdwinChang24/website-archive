@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "editorconfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "eg2.vscode-npm-script",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "vue.vscode-typescript-vue-plugin",
+        "zixuanchen.vitest-explorer",
+        "vue.volar",
+        "DavidAnson.vscode-markdownlint"
+    ]
+}

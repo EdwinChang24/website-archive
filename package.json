@@ -1,0 +1,43 @@
+{
+    "name": "website",
+    "author": "Edwin Chang",
+    "license": "MIT",
+    "private": true,
+    "devDependencies": {
+        "@nuxtjs/eslint-config-typescript": "^10.0.0",
+        "@nuxtjs/tailwindcss": "^5.1.2",
+        "@typescript-eslint/parser": "^5.27.1",
+        "autoprefixer": "^10.4.7",
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-nuxt": "^3.2.0",
+        "eslint-plugin-vue": "^9.1.1",
+        "gitmoji-commit-hook": "^3.0.2",
+        "husky": "^8.0.1",
+        "markdownlint-cli": "^0.31.1",
+        "node-actionlint": "^1.2.2",
+        "npm-run-all": "^4.1.5",
+        "nuxt": "3.0.0-rc.3",
+        "postcss": "^8.4.14",
+        "prettier": "^2.6.2",
+        "typescript": "^4.7.3",
+        "vitest": "^0.14.2"
+    },
+    "scripts": {
+        "prepare": "husky install",
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "test": "vitest run",
+        "lint": "run-s lint:*",
+        "lint:eslint": "eslint .",
+        "lint:markdown": "markdownlint -d .",
+        "lint:prettier": "prettier -c .",
+        "lint:action": "node-actionlint",
+        "fix": "run-s fix:*",
+        "fix:eslint": "eslint --fix .",
+        "fix:markdown": "markdownlint -d -f .",
+        "fix:prettier": "prettier --w ."
+    }
+}
