@@ -1,5 +1,7 @@
 # Website
 
+[![License](https://img.shields.io/github/license/EdwinChang24/website)](./LICENSE)
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg)](https://gitmoji.dev)
 [![Lint status](https://github.com/EdwinChang24/website/actions/workflows/lint.yml/badge.svg)](https://github.com/EdwinChang24/website/actions/workflows/lint.yml)
 [![Tests status](https://github.com/EdwinChang24/website/actions/workflows/tests.yml/badge.svg)](https://github.com/EdwinChang24/website/actions/workflows/tests.yml)
 
