@@ -7,5 +7,6 @@ export default defineNuxtConfig({
     meta: {
         title: "Edwin Chang",
         charset: "UTF-8",
+        link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
 });
