@@ -3,6 +3,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "files.associations": {
         "LICENSE": "plaintext",
-        ".markdownlintignore": "ignore"
+        ".markdownlintignore": "ignore",
+        "**/tailwind.css": "tailwindcss"
     }
 }
