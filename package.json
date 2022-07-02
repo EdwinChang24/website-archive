@@ -5,7 +5,7 @@
     "private": true,
     "devDependencies": {
         "@nuxtjs/eslint-config-typescript": "10.0.0",
-        "@typescript-eslint/parser": "5.29.0",
+        "@typescript-eslint/parser": "5.30.3",
         "autoprefixer": "10.4.7",
         "eslint": "8.19.0",
         "eslint-config-prettier": "8.5.0",
