@@ -13,7 +13,11 @@
     <div>
         <Background class="absolute h-screen w-screen" />
         <div class="absolute inset-1/3 flex justify-center items-center">
-            <p @click="randomColor" class="self-center text-center font-sans text-2xl select-none" :style="{ color: color }">
+            <p
+                @click="randomColor"
+                class="self-center text-center font-sans text-2xl select-none"
+                :style="{ color: color }"
+            >
                 Not much here yet. Maybe check back later.
             </p>
         </div>
