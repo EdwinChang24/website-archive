@@ -10,9 +10,12 @@
 </script>
 
 <template>
-    <div class="grid place-items-center h-screen">
-        <p @click="randomColor" class="font-sans text-3xl select-none" :style="{ color: color }">
-            Nothing here yet! Check back later.
-        </p>
+    <div>
+        <Background />
+        <div class="grid place-items-center h-screen">
+            <p @click="randomColor" class="font-sans text-3xl select-none" :style="{ color: color }">
+                Nothing here yet! Check back later.
+            </p>
+        </div>
     </div>
 </template>

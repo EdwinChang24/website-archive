@@ -13,6 +13,7 @@
         "eslint-plugin-prettier": "4.2.1",
         "eslint-plugin-vue": "9.2.0",
         "gitmoji-cli": "5.0.2",
+        "gsap": "3.10.4",
         "husky": "8.0.1",
         "markdownlint-cli": "0.31.1",
         "node-actionlint": "1.2.2",
