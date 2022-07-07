@@ -1,41 +1,17 @@
 <script setup lang="ts">
     import { gsap } from "gsap";
 
-    const mouseX = ref(0);
-    const mouseY = ref(0);
-
-    const root = ref(null);
-
-    let windowWidth: number = null;
-    let windowHeight: number = null;
-
-    onMounted(() => {
-        windowWidth = root.value.clientWidth;
-        windowHeight = root.value.clientHeight;
-    });
-
-    // function percentToX(percent: number) {
-    //     return windowWidth != null ? (percent * windowWidth) / 100 : null;
-    // }
+    let { x, y } = useMousePos();
 
     const percentToX = computed(() => {
-        return (percent: number) => (windowWidth != null ? (percent * windowWidth) / 100 : null);
+        return (percent: number) => (percent * window.innerWidth) / 100;
     });
-
-    // function percentToY(percent: number) {
-    //     return windowHeight != null ? (percent * windowHeight) / 100 : null;
-    // }
 
     const percentToY = computed(() => {
-        return (percent: number) => (windowHeight != null ? (percent * windowHeight) / 100 : null);
+        return (percent: number) => (percent * window.innerHeight) / 100;
     });
 
-    function onMove(e: MouseEvent) {
-        if (root == null) return;
-        windowWidth = root.value.clientWidth;
-        windowHeight = root.value.clientHeight;
-        mouseX.value = (e.clientX * 100) / windowWidth;
-        mouseY.value = (e.clientY * 100) / windowHeight;
+    function onMove() {
         gsap.to(corners, {
             duration: 0.1,
             tlx: updateTL().x,
@@ -62,6 +38,8 @@
         });
     }
 
+    watch([x, y], onMove);
+
     /** Distance between each dot's center of potential range and edge of screen */
     const marginLike = 30;
     /** Total horizontal/vertical length for each dot to move in */
@@ -79,7 +57,7 @@
     });
 
     function updateTL() {
-        const dist = (mouseX.value + mouseY.value - marginLike) / Math.SQRT2;
+        const dist = (x.value + y.value - marginLike) / Math.SQRT2;
         const ratio = dist / ((100 - marginLike) * Math.SQRT2);
         return {
             x: marginLike - (ratio * room) / 2,
@@ -88,7 +66,7 @@
     }
 
     function updateTR() {
-        const dist = (-mouseX.value + mouseY.value + (100 - 2 * marginLike)) / Math.SQRT2;
+        const dist = (-x.value + y.value + (100 - 2 * marginLike)) / Math.SQRT2;
         const ratio = dist / ((100 - marginLike) * Math.SQRT2);
         return {
             x: 100 - marginLike + (ratio * room) / 2,
@@ -97,7 +75,7 @@
     }
 
     function updateBL() {
-        const dist = (-mouseX.value + mouseY.value - (100 - 2 * marginLike)) / Math.SQRT2;
+        const dist = (-x.value + y.value - (100 - 2 * marginLike)) / Math.SQRT2;
         const ratio = dist / ((100 - marginLike) * Math.SQRT2);
         return {
             x: marginLike + (ratio * room) / 2,
@@ -106,7 +84,7 @@
     }
 
     function updateBR() {
-        const dist = (mouseX.value + mouseY.value - 2 * (100 - marginLike)) / Math.SQRT2;
+        const dist = (x.value + y.value - 2 * (100 - marginLike)) / Math.SQRT2;
         const ratio = dist / ((100 - marginLike) * Math.SQRT2);
         return {
             x: 100 - marginLike - (ratio * room) / 2,
@@ -127,7 +105,7 @@
 </script>
 
 <template>
-    <div @mousemove="onMove($event)" ref="root" class="w-screen h-screen">
+    <div class="w-screen h-screen">
         <svg width="100%" height="100%">
             <path
                 :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.tx)} ${percentToY(
