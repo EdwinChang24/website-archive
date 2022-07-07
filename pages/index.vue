@@ -11,10 +11,10 @@
 
 <template>
     <div>
-        <Background />
-        <div class="grid place-items-center h-screen">
-            <p @click="randomColor" class="font-sans text-3xl select-none" :style="{ color: color }">
-                Nothing here yet! Check back later.
+        <Background class="absolute h-screen w-screen" />
+        <div class="absolute inset-1/3 flex justify-center items-center">
+            <p @click="randomColor" class="self-center text-center font-sans text-2xl select-none" :style="{ color: color }">
+                Not much here yet. Maybe check back later.
             </p>
         </div>
     </div>

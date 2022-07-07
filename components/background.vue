@@ -105,44 +105,42 @@
 </script>
 
 <template>
-    <div class="w-screen h-screen">
-        <svg width="100%" height="100%">
-            <path
-                :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.tx)} ${percentToY(
-                    midpoints.ty
-                )} ${percentToX(corners.trx)} ${percentToY(corners.try)}`"
-                stroke="red"
-                stroke-width="3"
-                fill="none"
-            />
-            <path
-                :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.lx)} ${percentToY(
-                    midpoints.ly
-                )} ${percentToX(corners.blx)} ${percentToY(corners.bly)}`"
-                stroke="red"
-                stroke-width="3"
-                fill="none"
-            />
-            <path
-                :d="`M ${percentToX(corners.trx)} ${percentToY(corners.try)} Q ${percentToX(midpoints.rx)} ${percentToY(
-                    midpoints.ry
-                )} ${percentToX(corners.brx)} ${percentToY(corners.bry)}`"
-                stroke="red"
-                stroke-width="3"
-                fill="none"
-            />
-            <path
-                :d="`M ${percentToX(corners.blx)} ${percentToY(corners.bly)} Q ${percentToX(midpoints.bx)} ${percentToY(
-                    midpoints.by
-                )} ${percentToX(corners.brx)} ${percentToY(corners.bry)}`"
-                stroke="red"
-                stroke-width="3"
-                fill="none"
-            />
-            <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="10" stroke="black" />
-            <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="10" stroke="black" />
-            <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="10" stroke="black" />
-            <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="10" stroke="black" />
-        </svg>
-    </div>
+    <svg width="100%" height="100%">
+        <path
+            :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.tx)} ${percentToY(
+                midpoints.ty
+            )} ${percentToX(corners.trx)} ${percentToY(corners.try)}`"
+            stroke="red"
+            stroke-width="3"
+            fill="none"
+        />
+        <path
+            :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.lx)} ${percentToY(
+                midpoints.ly
+            )} ${percentToX(corners.blx)} ${percentToY(corners.bly)}`"
+            stroke="red"
+            stroke-width="3"
+            fill="none"
+        />
+        <path
+            :d="`M ${percentToX(corners.trx)} ${percentToY(corners.try)} Q ${percentToX(midpoints.rx)} ${percentToY(
+                midpoints.ry
+            )} ${percentToX(corners.brx)} ${percentToY(corners.bry)}`"
+            stroke="red"
+            stroke-width="3"
+            fill="none"
+        />
+        <path
+            :d="`M ${percentToX(corners.blx)} ${percentToY(corners.bly)} Q ${percentToX(midpoints.bx)} ${percentToY(
+                midpoints.by
+            )} ${percentToX(corners.brx)} ${percentToY(corners.bry)}`"
+            stroke="red"
+            stroke-width="3"
+            fill="none"
+        />
+        <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="10" stroke="black" />
+        <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="10" stroke="black" />
+        <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="10" stroke="black" />
+        <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="10" stroke="black" />
+    </svg>
 </template>
