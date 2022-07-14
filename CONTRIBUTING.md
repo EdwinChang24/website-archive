@@ -6,7 +6,7 @@ Before making contributions, please read and understand the [Code of Conduct](./
 
 ## Setting up for development
 
-First install [NodeJS](https://nodejs.org/en/download/) and [Visual Studio Code](https://code.visualstudio.com/Download) if you haven't already.
+First install [Node.js](https://nodejs.org/en/download/), [Yarn](https://yarnpkg.com/getting-started/install), and [Visual Studio Code](https://code.visualstudio.com/Download) if you haven't already.
 
 Then open a terminal and clone this repo:
 
@@ -40,7 +40,7 @@ gh repo clone EdwinChang24/website && cd website
 Install the necessary dependencies:
 
 ```bash
-npm i
+yarn install
 ```
 
 Open the folder in Visual Studio Code:
@@ -65,7 +65,7 @@ This will enable [Take Over Mode](https://github.com/johnsoncodehk/volar/discuss
 To run the website, open a terminal and run:
 
 ```bash
-npm run dev -- -o
+yarn run dev -- -o
 ```
 
 This will start a development server at `localhost:3000/`.
@@ -73,4 +73,4 @@ This will start a development server at `localhost:3000/`.
 ## Notes
 
 -   Using Visual Studio Code's built-in Git tools may not work properly with the custom Git hooks. Please use the command line instead.
--   When committing changes, it's recommended to use `npm run commit` rather than `git commit`. This will show a prompt to format the commit message correctly.
+-   When committing changes, it's recommended to use `yarn run commit` rather than `git commit`. This will show a prompt to format the commit message correctly.

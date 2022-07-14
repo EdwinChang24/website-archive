@@ -2,62 +2,42 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "npm",
-            "script": "test",
+            "type": "shell",
+            "command": "yarn run test",
             "group": {
                 "kind": "test",
                 "isDefault": true
             },
-            "problemMatcher": [],
-            "label": "npm: test",
-            "detail": "vitest run"
+            "label": "yarn run test",
+            "detail": "Run tests."
         },
         {
-            "type": "npm",
-            "script": "install",
-            "group": "none",
-            "problemMatcher": [],
-            "label": "npm: install",
-            "detail": "install dependencies from package"
+            "type": "shell",
+            "command": "yarn install",
+            "label": "yarn install",
+            "detail": "Install project dependencies."
         },
         {
-            "type": "npm",
-            "script": "build",
+            "type": "shell",
+            "command": "yarn run build",
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [],
-            "label": "npm: build",
-            "detail": "nuxt build"
+            "label": "yarn run build",
+            "detail": "Build the project."
         },
         {
-            "type": "npm",
-            "script": "check",
-            "problemMatcher": [],
-            "label": "npm: check",
-            "detail": "prettier --check --ignore-path ./.gitignore ."
+            "type": "shell",
+            "command": "yarn run lint",
+            "label": "yarn run lint",
+            "detail": "Lint project files."
         },
         {
-            "type": "npm",
-            "script": "eslint",
-            "problemMatcher": [],
-            "label": "npm: eslint",
-            "detail": "eslint --ignore-path ./.gitignore ."
-        },
-        {
-            "type": "npm",
-            "script": "markdownlint",
-            "problemMatcher": [],
-            "label": "npm: markdownlint",
-            "detail": "markdownlint-cli2"
-        },
-        {
-            "type": "npm",
-            "script": "preview",
-            "problemMatcher": [],
-            "label": "npm: preview",
-            "detail": "nuxt preview"
+            "type": "shell",
+            "command": "yarn run preview",
+            "label": "yarn run preview",
+            "detail": "Preview the project."
         }
     ]
 }

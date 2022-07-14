@@ -14,13 +14,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "npm"
+          cache: "yarn"
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: Prepare Nuxt
         run: npx --no nuxt prepare
 
       - name: Run tests
-        run: npm run test
+        run: yarn run test

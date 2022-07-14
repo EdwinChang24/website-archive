@@ -14,22 +14,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: "npm"
+          cache: "yarn"
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install
 
       - name: Prepare Nuxt
         run: npx --no nuxt prepare
 
       - name: Run eslint
-        run: npm run lint:eslint
+        run: yarn run lint:eslint
 
       - name: Run markdownlint
-        run: npm run lint:markdown
+        run: yarn run lint:markdown
 
       - name: Run Prettier
-        run: npm run lint:prettier
+        run: yarn run lint:prettier
 
       - name: Run actionlint
-        run: npm run lint:action
+        run: yarn run lint:action
