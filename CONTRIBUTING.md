@@ -74,3 +74,4 @@ This will start a development server at `localhost:3000/`.
 
 -   Using Visual Studio Code's built-in Git tools may not work properly with the custom Git hooks. Please use the command line instead.
 -   When committing changes, it's recommended to use `yarn run commit` rather than `git commit`. This will show a prompt to format the commit message correctly.
+-   When opening a pull request, please include a [gitmoji](https://gitmoji.dev/) at the front of the title.
