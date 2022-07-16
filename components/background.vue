@@ -28,7 +28,7 @@
             delay: 0.1,
             ease: "elastic.out(3.5, 0.75)",
             tx: (updateTL().x + updateTR().x) / 2,
-            ty: (updateTL().y + updateTL().y) / 2,
+            ty: (updateTL().y + updateTR().y) / 2,
             lx: (updateTL().x + updateBL().x) / 2,
             ly: (updateTL().y + updateBL().y) / 2,
             rx: (updateTR().x + updateBR().x) / 2,
@@ -39,6 +39,12 @@
     }
 
     watch([x, y], onMove);
+
+    window.addEventListener("resize", onMove);
+
+    onUnmounted(() => {
+        window.removeEventListener("resize", onMove);
+    });
 
     /** Distance between each dot's center of potential range and edge of screen */
     const marginLike = 30;
