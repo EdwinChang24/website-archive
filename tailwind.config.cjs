@@ -6,7 +6,11 @@ module.exports = {
         "./pages/**/*.{vue,js,jsx,ts,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            dropShadow: {
+                "sm-red": "0 0 1px red",
+            },
+        },
     },
     plugins: [],
 };

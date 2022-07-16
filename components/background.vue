@@ -13,7 +13,7 @@
 
     function onMove() {
         gsap.to(corners, {
-            duration: 0.1,
+            duration: 0.2,
             tlx: updateTL().x,
             tly: updateTL().y,
             trx: updateTR().x,
@@ -26,7 +26,7 @@
         gsap.to(midpoints, {
             duration: 0.3,
             delay: 0.1,
-            ease: "elastic.out(3.5, 0.75)",
+            ease: "elastic.out(1.5, 0.75)",
             tx: (updateTL().x + updateTR().x) / 2,
             ty: (updateTL().y + updateTR().y) / 2,
             lx: (updateTL().x + updateBL().x) / 2,
@@ -119,6 +119,7 @@
             stroke="red"
             stroke-width="3"
             fill="none"
+            class="drop-shadow-sm-red"
         />
         <path
             :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.lx)} ${percentToY(
@@ -127,6 +128,7 @@
             stroke="red"
             stroke-width="3"
             fill="none"
+            class="drop-shadow-sm-red"
         />
         <path
             :d="`M ${percentToX(corners.trx)} ${percentToY(corners.try)} Q ${percentToX(midpoints.rx)} ${percentToY(
@@ -135,6 +137,7 @@
             stroke="red"
             stroke-width="3"
             fill="none"
+            class="drop-shadow-sm-red"
         />
         <path
             :d="`M ${percentToX(corners.blx)} ${percentToY(corners.bly)} Q ${percentToX(midpoints.bx)} ${percentToY(
@@ -143,10 +146,16 @@
             stroke="red"
             stroke-width="3"
             fill="none"
+            class="drop-shadow-sm-red"
         />
-        <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="10" stroke="black" />
-        <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="10" stroke="black" />
-        <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="10" stroke="black" />
-        <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="10" stroke="black" />
+        <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="10" class="drop-shadow-lg" />
+        <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="10" class="drop-shadow-lg" />
+        <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="10" class="drop-shadow-lg" />
+        <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="10" class="drop-shadow-lg" />
+
+        <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="3" fill="red" class="drop-shadow-sm-red" />
+        <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="3" fill="red" class="drop-shadow-sm-red" />
+        <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="3" fill="red" class="drop-shadow-sm-red" />
+        <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="3" fill="red" class="drop-shadow-sm-red" />
     </svg>
 </template>
