@@ -18,7 +18,7 @@
         "markdownlint-cli": "0.32.0",
         "node-actionlint": "1.2.2",
         "npm-run-all": "4.1.5",
-        "nuxt": "3.0.0-rc.6",
+        "nuxt": "3.0.0-rc.8",
         "postcss": "8.4.14",
         "prettier": "2.7.1",
         "tailwindcss": "3.1.6",
