@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import isMobile from "is-mobile";
+
     const color = ref("#000000");
     function randomColor() {
         var newColor = "";
@@ -11,7 +13,7 @@
 
 <template>
     <div>
-        <Background class="absolute h-screen w-screen" />
+        <Background v-if="!isMobile()" class="absolute h-screen w-screen" />
         <div class="absolute inset-1/3 flex justify-center items-center">
             <p
                 @click="randomColor"
