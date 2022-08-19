@@ -111,51 +111,39 @@
 </script>
 
 <template>
-    <svg width="100%" height="100%">
+    <svg class="w-full h-full">
         <path
             :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.tx)} ${percentToY(
                 midpoints.ty
             )} ${percentToX(corners.trx)} ${percentToY(corners.try)}`"
-            stroke="red"
-            stroke-width="3"
-            fill="none"
-            class="drop-shadow-sm-red"
+            class="stroke-red-500 stroke-2 drop-shadow-sm-red fill-transparent"
         />
         <path
             :d="`M ${percentToX(corners.tlx)} ${percentToY(corners.tly)} Q ${percentToX(midpoints.lx)} ${percentToY(
                 midpoints.ly
             )} ${percentToX(corners.blx)} ${percentToY(corners.bly)}`"
-            stroke="red"
-            stroke-width="3"
-            fill="none"
-            class="drop-shadow-sm-red"
+            class="stroke-red-500 stroke-2 drop-shadow-sm-red fill-transparent"
         />
         <path
             :d="`M ${percentToX(corners.trx)} ${percentToY(corners.try)} Q ${percentToX(midpoints.rx)} ${percentToY(
                 midpoints.ry
             )} ${percentToX(corners.brx)} ${percentToY(corners.bry)}`"
-            stroke="red"
-            stroke-width="3"
-            fill="none"
-            class="drop-shadow-sm-red"
+            class="stroke-red-500 stroke-2 drop-shadow-sm-red fill-transparent"
         />
         <path
             :d="`M ${percentToX(corners.blx)} ${percentToY(corners.bly)} Q ${percentToX(midpoints.bx)} ${percentToY(
                 midpoints.by
             )} ${percentToX(corners.brx)} ${percentToY(corners.bry)}`"
-            stroke="red"
-            stroke-width="3"
-            fill="none"
-            class="drop-shadow-sm-red"
+            class="stroke-red-500 stroke-2 drop-shadow-sm-red fill-transparent"
         />
         <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="10" class="drop-shadow-lg" />
         <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="10" class="drop-shadow-lg" />
         <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="10" class="drop-shadow-lg" />
         <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="10" class="drop-shadow-lg" />
 
-        <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="3" fill="red" class="drop-shadow-sm-red" />
-        <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="3" fill="red" class="drop-shadow-sm-red" />
-        <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="3" fill="red" class="drop-shadow-sm-red" />
-        <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="3" fill="red" class="drop-shadow-sm-red" />
+        <circle :cx="`${corners.tlx}%`" :cy="`${corners.tly}%`" r="3" class="fill-red-500 drop-shadow-sm-red" />
+        <circle :cx="`${corners.trx}%`" :cy="`${corners.try}%`" r="3" class="fill-red-500 drop-shadow-sm-red" />
+        <circle :cx="`${corners.blx}%`" :cy="`${corners.bly}%`" r="3" class="fill-red-500 drop-shadow-sm-red" />
+        <circle :cx="`${corners.brx}%`" :cy="`${corners.bry}%`" r="3" class="fill-red-500 drop-shadow-sm-red" />
     </svg>
 </template>
