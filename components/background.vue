@@ -63,7 +63,7 @@
     });
 
     function updateTL() {
-        const dist = (x.value + y.value - marginLike) / Math.SQRT2;
+        const dist = (x.value + y.value - 2 * marginLike) / Math.SQRT2;
         const ratio = dist / ((100 - marginLike) * Math.SQRT2);
         return {
             x: marginLike - (ratio * room) / 2,
