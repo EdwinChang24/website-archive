@@ -13,6 +13,10 @@
 
 <template>
     <div>
+        <div
+            class="absolute w-screen h-screen bg-bottom bg-[url('/grid.svg')]"
+            style="mask-image: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1))"
+        />
         <Background v-if="!isMobile()" class="absolute h-screen w-screen" />
         <div class="absolute inset-1/3 flex justify-center items-center">
             <p
