@@ -11,7 +11,7 @@
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-nuxt": "4.0.0",
         "eslint-plugin-prettier": "4.2.1",
-        "eslint-plugin-vue": "9.4.0",
+        "eslint-plugin-vue": "9.7.0",
         "gitmoji-cli": "6.3.0",
         "gsap": "3.11.3",
         "husky": "8.0.1",
