@@ -4,7 +4,7 @@
     "license": "MIT",
     "private": true,
     "devDependencies": {
-        "@nuxtjs/eslint-config-typescript": "10.0.0",
+        "@nuxtjs/eslint-config-typescript": "11.0.0",
         "@typescript-eslint/parser": "5.41.0",
         "autoprefixer": "10.4.13",
         "eslint": "8.26.0",
